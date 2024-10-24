@@ -15,6 +15,7 @@
         <module>order-service</module>
         <module>gateway-service</module>
         <module>auth-service</module>
+        <module>mybatis-generator</module>
     </modules>
 
     <parent>
@@ -52,7 +53,7 @@
         <knife4j.version>3.0.3</knife4j.version>
         <nimbus-jose-jwt.version>9.23</nimbus-jose-jwt.version>
         <common-service.version>1.0-SNAPSHOT</common-service.version>
-        <mall-mbg.version>1.0-SNAPSHOT</mall-mbg.version>
+        <mybatis-generator-config.version>1.0-SNAPSHOT</mybatis-generator-config.version>
     </properties>
 
     <dependencies>
@@ -110,9 +111,9 @@
             </dependency>
             <!--mall中MBG生成模块-->
             <dependency>
-                <groupId>com.macro.mall</groupId>
-                <artifactId>mall-mbg</artifactId>
-                <version>${mall-mbg.version}</version>
+                <groupId>com.example</groupId>
+                <artifactId>mybatis-generator</artifactId>
+                <version>${mybatis-generator-config.version}</version>
             </dependency>
             <!--MyBatis分页插件starter-->
             <dependency>
@@ -279,6 +280,10 @@
             <id>central2</id>
             <name>central2</name>
             <url>https://repo1.maven.org/maven2/</url>
+        </repository>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2/</url>
         </repository>
     </repositories>
 </project>
