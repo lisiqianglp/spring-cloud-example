@@ -73,7 +73,7 @@
                 <pattern>
                     <pattern>
                         {
-                        "project": "mall-swarm",
+                        "project": "spring-cloud-example",
                         "level": "%level",
                         "service": "${APP_NAME:-}",
                         "pid": "${PID:-}",
@@ -111,7 +111,7 @@
                 <pattern>
                     <pattern>
                         {
-                        "project": "mall-swarm",
+                        "project": "spring-cloud-example",
                         "level": "%level",
                         "service": "${APP_NAME:-}",
                         "pid": "${PID:-}",
@@ -144,7 +144,7 @@
                 <pattern>
                     <pattern>
                         {
-                        "project": "mall-swarm",
+                        "project": "spring-cloud-example",
                         "level": "%level",
                         "service": "${APP_NAME:-}",
                         "pid": "${PID:-}",
@@ -177,7 +177,7 @@
                 <pattern>
                     <pattern>
                         {
-                        "project": "mall-swarm",
+                        "project": "spring-cloud-example",
                         "level": "%level",
                         "service": "${APP_NAME:-}",
                         "class": "%logger",
@@ -211,11 +211,11 @@
         <appender-ref ref="LOG_STASH_ERROR"/>
     </root>
 
-    <logger name="com.macro.mall.common.log.WebLogAspect" level="DEBUG">
+    <logger name="com.example.common.log.WebLogAspect" level="DEBUG">
         <appender-ref ref="LOG_STASH_RECORD"/>
     </logger>
 
-    <logger name="com.macro.mall" level="DEBUG">
+    <logger name="com.example" level="DEBUG">
         <appender-ref ref="LOG_STASH_BUSINESS"/>
     </logger>
 </configuration>

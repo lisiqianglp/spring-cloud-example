@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * 后台用户服务远程调用Service
  * Created by macro on 2019/10/18.
  */
-@FeignClient("mall-admin")
+@FeignClient("user-service")
 public interface UmsAdminService {
 
     @GetMapping("/admin/loadByUsername")

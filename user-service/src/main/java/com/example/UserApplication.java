@@ -6,7 +6,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 
-@EnableFeignClients
+@EnableFeignClients(basePackages = "com.example")
 @EnableDiscoveryClient
 @SpringBootApplication(scanBasePackages = "com.example")
 public class UserApplication {
