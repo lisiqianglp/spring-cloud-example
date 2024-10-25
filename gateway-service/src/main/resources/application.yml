@@ -12,28 +12,28 @@ spring:
           lower-case-service-id: true #使用小写service-id
       routes: #配置路由路径
         - id: auth-service
-          uri: lb://auth
+          uri: lb://auth-service
           predicates:
-            - Path=/auth/**
+            - Path=/auth-service/**
           filters:
             - StripPrefix=1
         - id: user-service
-          uri: lb://user
+          uri: lb://user-service
           predicates:
-            - Path=/user/**
+            - Path=/user-service/**
           filters:
             - StripPrefix=1
         - id: order-service
-          uri: lb://order
+          uri: lb://order-service
           predicates:
-            - Path=/order/**
+            - Path=/order-service/**
           filters:
             - StripPrefix=1
   security:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: 'http://localhost:8201/auth/rsa/publicKey' #配置RSA的公钥访问地址
+          jwk-set-uri: 'http://localhost:8201/auth-service/rsa/publicKey' #配置RSA的公钥访问地址
   redis:
     database: 0
     port: 6379
@@ -52,8 +52,8 @@ secure:
       - "/*/*.ico"
       - "/webjars/**"
       - "/actuator/**"
-      - "/auth/oauth/token"
-      - "/auth/rsa/publicKey"
+      - "/auth-service/oauth/token"
+      - "/auth-service/rsa/publicKey"
       - "/mall-search/**"
       - "/mall-portal/sso/login"
       - "/mall-portal/sso/register"
