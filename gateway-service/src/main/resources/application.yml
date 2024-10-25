@@ -62,9 +62,9 @@ secure:
       - "/mall-portal/product/**"
       - "/mall-portal/brand/**"
       - "/mall-portal/alipay/**"
-      - "/mall-admin/admin/login"
-      - "/mall-admin/admin/register"
-      - "/mall-admin/minio/upload"
+      - "/user-service/admin/login"
+      - "/user-service/admin/register"
+      - "/user-service/minio/upload"
 management: #开启SpringBoot Admin的监控
   endpoints:
     web:
