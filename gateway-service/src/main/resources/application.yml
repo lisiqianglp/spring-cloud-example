@@ -29,6 +29,12 @@ spring:
             - Path=/order-service/**
           filters:
             - StripPrefix=1
+        - id: oms-service
+          uri: lb://oms-service
+          predicates:
+            - Path=/oms-service/**
+          filters:
+            - StripPrefix=1
   security:
     oauth2:
       resourceserver:
@@ -50,6 +56,7 @@ secure:
       - "/*/*.css"
       - "/*/*.png"
       - "/*/*.ico"
+      - "/oms-service/infoSys/**"
       - "/webjars/**"
       - "/actuator/**"
       - "/auth-service/oauth/token"

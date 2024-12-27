@@ -45,6 +45,7 @@ public class UserServiceImpl implements UserDetailsService {
             throw new UsernameNotFoundException(MessageConstant.USERNAME_PASSWORD_ERROR);
         }
         userDto.setClientId(clientId);
+        System.err.println(userDto);
         SecurityUser securityUser = new SecurityUser(userDto);
         if (!securityUser.isEnabled()) {
             throw new DisabledException(MessageConstant.ACCOUNT_DISABLED);

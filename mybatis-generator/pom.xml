@@ -10,7 +10,7 @@
     <packaging>jar</packaging>
 
     <name>mybatis-generator</name>
-    <description>mall-mbg project for mall</description>
+    <description>mybatis-generator project for mall</description>
 
     <parent>
         <groupId>com.example</groupId>
