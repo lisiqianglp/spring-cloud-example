@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 @Api(tags = "CmsPrefrenceAreaController", description = "商品优选管理")
-@RequestMapping("/prefrenceArea")
+@RequestMapping("/prefrenceArea2")
 public class CmsPrefrenceAreaController {
     @ApiOperation("获取所有商品优选")
     @RequestMapping(value = "/listAll", method = RequestMethod.GET)

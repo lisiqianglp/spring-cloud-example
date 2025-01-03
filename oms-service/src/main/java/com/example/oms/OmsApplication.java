@@ -13,11 +13,9 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableFeignClients(basePackages = "com.example.oms")
 @EnableDiscoveryClient
 @SpringBootApplication(scanBasePackages = "com.example.oms")
-public class OmsApplication
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-        SpringApplication.run(OmsApplication.class,args);
+@MapperScan("com.example.order.dao")
+public class OmsApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(OmsApplication.class, args);
     }
 }

@@ -4,7 +4,6 @@ import com.example.common.config.BaseSwaggerConfig;
 import com.example.common.domain.SwaggerProperties;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
